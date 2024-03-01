@@ -26,8 +26,6 @@
 
 @media screen and (max-width: 768px) {
   .toggle {
-    position: relative;
-    display: inline-block;
     min-width: 40px;
     height: 20px;
   }
@@ -101,7 +99,7 @@ input:checked + .toggle__inner:before {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
   .toggle__text {
     font-size: 10px;
   }

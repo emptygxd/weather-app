@@ -1,6 +1,6 @@
 import { CITIES } from './constants.js';
-import { setDefaultLink, getMyLocation } from './helper function/fetchData.js';
-import { loadWidget } from './helper function/loadContent.js';
+import { setDefaultLink, getMyLocation } from './helperFunction/fetchData.js';
+import { loadWidget } from './helperFunction/loadContent.js';
 import { autocomplete } from './autocomplete.js';
 import {} from './saveCity.js';
 import {} from './slider.js';

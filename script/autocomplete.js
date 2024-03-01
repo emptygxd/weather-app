@@ -1,4 +1,4 @@
-import { loadWidget } from './helper function/loadContent.js';
+import { loadWidget } from './helperFunction/loadContent.js';
 
 export function autocomplete(data) {
   let inputs = document.querySelectorAll('#autocomplete');
@@ -40,9 +40,9 @@ export function autocomplete(data) {
 
       let link = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=11a8f32145f0e588bbdc9065c191a241`;
       localStorage.setItem('defaultLink', link);
-
-      if (localStorage.getItem('savedCities')) {
-        oldSavedCities = JSON.parse(localStorage.getItem('savedCities'));
+      const savedCities = localStorage.getItem('savedCities');
+      if (savedCities) {
+        oldSavedCities = savedCities;
       }
 
       if (!oldSavedCities.includes(city)) {

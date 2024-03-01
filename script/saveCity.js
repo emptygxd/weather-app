@@ -1,5 +1,5 @@
 import { SAVED_CITIES, CITIES } from './constants.js';
-import { loadWidget } from './helper function/loadContent.js';
+import { loadWidget } from './helperFunction/loadContent.js';
 
 SAVED_CITIES.addEventListener('click', e => {
   let hoveredCity = e.target;

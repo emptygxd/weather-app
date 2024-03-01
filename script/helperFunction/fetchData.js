@@ -15,8 +15,9 @@ export function getMyLocation() {
 }
 
 export function setDefaultLink() {
-  if (localStorage.getItem('defaultLink')) {
-    return localStorage.getItem('defaultLink');
+  const defaultLink = localStorage.getItem('defaultLink');
+  if (defaultLink) {
+    return defaultLink;
   } else {
     return 'https://api.openweathermap.org/data/2.5/weather?lat=51.51&lon=-0.13&units=metric&appid=11a8f32145f0e588bbdc9065c191a241';
   }

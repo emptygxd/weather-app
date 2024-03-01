@@ -1,4 +1,4 @@
-import { loadMenu } from './helper function/loadContent.js';
+import { loadMenu } from './helperFunction/loadContent.js';
 
 const sliderImages = document.querySelectorAll('.slider__img');
 const slider = document.querySelector('.slider');

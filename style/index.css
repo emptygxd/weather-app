@@ -41,7 +41,7 @@ body {
   body {
     height: 100vh;
     min-width: 100vw;
-    overflow-y: hidden;
+
     position: fixed;
   }
 }
@@ -118,7 +118,6 @@ strong {
 @media screen and (max-width: 375px) {
   .header-mobile > div {
     width: 150px;
-    display: flex;
     flex-direction: column;
     gap: 8px;
   }
