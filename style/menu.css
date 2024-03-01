@@ -1,0 +1,225 @@
+.menu__container {
+  padding: 39px 120px 0 35px;
+  width: 35vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  border-left: 4px solid var(--border-color);
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__container {
+    width: 100vw;
+    height: auto;
+    min-height: 50vh;
+    padding: 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: none;
+    border-top: 4px solid var(--border-color);
+    overflow: auto;
+  }
+}
+
+.menu__input {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__input {
+    display: none;
+  }
+}
+
+.autocomplete-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+
+  border: none;
+  border-bottom: 1px solid var(--gray);
+  outline: none;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .autocomplete-input {
+    height: 45px;
+  }
+}
+
+.autocomplete-input::placeholder {
+  font-size: 20px;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 375px) {
+  .autocomplete-input {
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .autocomplete-input::placeholder {
+    font-size: 12px;
+  }
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  display: none;
+  z-index: 5;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: var(--black);
+}
+
+.autocomplete-wrap.active .autocomplete-list {
+  display: block;
+  border-radius: 0 0 3px 3px;
+}
+
+.autocomplete-item {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+
+  background-color: var(--black);
+
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.focused {
+  background: var(--hover-color);
+}
+
+.autocomplete-wrap.active .autocomplete-input {
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid transparent;
+}
+
+.menu__container > p {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__container > p {
+    margin-bottom: 15px;
+  }
+}
+
+.menu__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__details {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.weather-condition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .weather-condition {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .weather-condition img {
+    height: 15px;
+  }
+}
+
+.weather-condition > div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray);
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 330px;
+    margin-bottom: 15px;
+  }
+}
+
+.line ~ p {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .line ~ p {
+    margin-bottom: 0;
+  }
+}
+
+.saved__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: -10px;
+}
+
+.saved__container div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .saved__container {
+    width: 340px;
+  }
+}
+
+#trash {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  #trash {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.saved__city {
+  padding: 10px;
+}
+
+.saved__container > div:hover {
+  background-color: var(--hover-color);
+  border-radius: 10px;
+  cursor: pointer;
+}

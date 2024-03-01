@@ -1,0 +1,108 @@
+.toggle__container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle__container {
+    display: none;
+  }
+
+  .toggle__container-mobile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  min-width: 55px;
+  height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle {
+    position: relative;
+    display: inline-block;
+    min-width: 40px;
+    height: 20px;
+  }
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  cursor: pointer;
+  transition: 0.4s;
+
+  background-color: var(--toggle-background-color);
+  border-radius: 34px;
+}
+
+.toggle__inner:before {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+
+  content: '';
+
+  height: 22px;
+  width: 22px;
+
+  background-color: var(--black);
+  border-radius: 50%;
+
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle__inner:before {
+    height: 12px;
+    width: 12px;
+  }
+}
+
+input:checked + .toggle__inner {
+  background-color: var(--black);
+}
+
+input:checked + .toggle__inner:before {
+  transform: translateX(26px);
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  input:checked + .toggle__inner:before {
+    transform: translateX(20px);
+  }
+}
+
+.toggle__text {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .toggle__text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .toggle__text {
+    font-size: 10px;
+  }
+}

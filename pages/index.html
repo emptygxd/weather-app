@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" class="colors">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/main.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="slider">
+      <img
+        class="slider__img"
+        src="../assets/backgrounds/bg-snow.jpg"
+        alt="snow" />
+      <img
+        class="slider__img"
+        src="../assets/backgrounds/bg-sun.jpg"
+        alt="sun" />
+      <img
+        class="slider__img"
+        src="../assets/backgrounds/bg-thunder.jpg"
+        alt="rain" />
+    </div>
+    <main>
+      <div id="weatherAnimation"></div>
+
+      <section class="weather__container">
+        <img class="weather__logo" src="../assets/icons/logo.svg" alt="logo" />
+
+        <div class="header-mobile">
+          <img
+            class="weather__logo mobile"
+            src="../assets/icons/logo.svg"
+            alt="logo" />
+          <div>
+            <div class="toggle__container-mobile">
+              <label class="toggle">
+                <input type="checkbox" id="checkbox" />
+                <span class="toggle__inner"> </span>
+              </label>
+              <label class="toggle__text" for="checkbox">
+                Включить режим слайдшоу
+              </label>
+            </div>
+            <div class="menu__input-mobile">
+              <input
+                type="text"
+                id="autocomplete"
+                placeholder="Search Location..."
+                autocomplete="off"
+                class="autocomplete-input" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="weather__widget"></div>
+          <div id="myLocation">
+            <img src="../assets/icons/location.png" alt="location" />
+            <p>Show my location</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu__container">
+        <div class="toggle__container">
+          <label class="toggle">
+            <input type="checkbox" id="checkbox" />
+            <span class="toggle__inner"> </span>
+          </label>
+          <label class="toggle__text" for="checkbox">
+            Включить режим слайдшоу
+          </label>
+        </div>
+        <div class="menu__input">
+          <input
+            type="text"
+            id="autocomplete"
+            placeholder="Search Location..."
+            autocomplete="off"
+            class="autocomplete-input" />
+        </div>
+        <p>Weather Details</p>
+        <div class="menu__details"></div>
+
+        <span class="line"></span>
+        <p>Saved Cities</p>
+
+        <div class="saved__container"></div>
+      </section>
+    </main>
+  </body>
+  <script src="../script/index.js" type="module"></script>
+</html>
