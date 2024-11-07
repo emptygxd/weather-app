@@ -8,10 +8,30 @@ export function getMyLocation() {
   }
 
   function onErrorLocation(err) {
-    console.log('err', err);
+    switch (err.code) {
+      case err.PERMISSION_DENIED:
+        console.log('Ошибка: доступ к геолокации запрещён пользователем.');
+        break;
+      case err.POSITION_UNAVAILABLE:
+        console.log('Ошибка: данные о местоположении недоступны.');
+        break;
+      case err.TIMEOUT:
+        console.log(
+          'Ошибка: время ожидания ответа от службы геолокации истекло.'
+        );
+        break;
+      default:
+        console.log(
+          'Ошибка: неизвестная ошибка при получении геолокации.',
+          err.message
+        );
+        break;
+    }
   }
 
-  navigator.geolocation.getCurrentPosition(onSuccessLocation, onErrorLocation);
+  navigator.geolocation.getCurrentPosition(onSuccessLocation, onErrorLocation, {
+    timeout: 10000, // Задаёт таймаут в 10 секунд
+  });
 }
 
 export function setDefaultLink() {

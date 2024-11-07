@@ -157,7 +157,12 @@ export async function loadWidget(link) {
 function setDate() {
   const getDate = new getTime();
   const parent = document.querySelector('.weather__info');
-  parent.removeChild(document.querySelector('.weather__date'));
+
+  const weatherDate = document.querySelector('.weather__date');
+  if (weatherDate) {
+    parent.removeChild(weatherDate);
+  }
+
   const minutes = getDate.min;
   const seconds = getDate.sec;
   if (minutes === '00' && seconds === '00') {

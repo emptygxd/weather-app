@@ -38,16 +38,17 @@ export function autocomplete(data) {
       const lon = data[city].lon;
       let oldSavedCities = [];
 
-      let link = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=11a8f32145f0e588bbdc9065c191a241`;
+      const link = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=11a8f32145f0e588bbdc9065c191a241`;
       localStorage.setItem('defaultLink', link);
+
       const savedCities = localStorage.getItem('savedCities');
+
       if (savedCities) {
-        oldSavedCities = savedCities;
+        oldSavedCities = JSON.parse(savedCities);
       }
 
       if (!oldSavedCities.includes(city)) {
         oldSavedCities.push(city);
-
         oldSavedCities.sort();
         localStorage.setItem('savedCities', JSON.stringify(oldSavedCities));
       }
