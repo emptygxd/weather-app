@@ -29,9 +29,7 @@ export function getMyLocation() {
     }
   }
 
-  navigator.geolocation.getCurrentPosition(onSuccessLocation, onErrorLocation, {
-    timeout: 10000, // Задаёт таймаут в 10 секунд
-  });
+  navigator.geolocation.getCurrentPosition(onSuccessLocation, onErrorLocation);
 }
 
 export function setDefaultLink() {
