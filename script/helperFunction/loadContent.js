@@ -159,7 +159,7 @@ function setDate() {
   const parent = document.querySelector('.weather__info');
 
   if (!parent) {
-    console.error('Элемент с классом .weather__info не найден в DOM.');
+    setDate();
     return;
   }
 
