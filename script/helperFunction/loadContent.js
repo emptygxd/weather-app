@@ -114,7 +114,7 @@ export function loadMenu(data) {
       <p>${key}</p>
     <div>
       <p>${details[key]}</p>
-      <img src="../assets/weather-condition-icons/${key}.svg" alt="${key}" />
+      <img src="./assets/weather-condition-icons/${key}.svg" alt="${key}" />
     </div>
     </div>`
     );
@@ -128,7 +128,7 @@ export function loadMenu(data) {
         'beforeend',
         `<div>
         <p class="saved__city">${element}</p>
-        <img id="trash" src="../assets/icons/trash.png" alt="trash" />
+        <img id="trash" src="./assets/icons/trash.png" alt="trash" />
       </div>`
       );
     });
